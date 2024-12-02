@@ -9,7 +9,7 @@ GET /home.html HTTP/1.1
 
 Dans cet exemple,GET est la méthode HTTP,/home.html est la ressource demandée et HTTP 1.1 est le protocole utilisé.
 
-Méthodes HTTP
+### Méthodes HTTP
 Les méthodes HTTP indiquent l'action que le client souhaite effectuer sur la ressource du serveur web.
 
 Les méthodes HTTP les plus courantes sont les suivantes :
@@ -38,19 +38,21 @@ PATCH
 
 Le client met partiellement à jour une ressource sur le serveur web.
 
-En-têtes de requête HTTP
+### En-têtes de requête HTTP
 Après la ligne de requête, les en-têtes HTTP sont suivis d'un saut de ligne.
 
 Il existe plusieurs possibilités d'inclure un en-tête HTTP dans la requête HTTP. Un en-tête est un nom insensible à la casse, suivi d'une adresse: et d'une valeur.
 
 Les en-têtes les plus courants sont les suivants :
 
-5
+```
 Host: example.com
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
 Accept: */*
 Accept-Language: en
 Content-type: text/json
+
+```
 L'en-têteHost spécifie l'hôte du serveur et indique où la ressource est demandée.
 
 L'en-têteUser-Agent informe le serveur web de l'application à l'origine de la requête. Il inclut souvent le système d'exploitation (Windows, Mac, Linux), la version et le fournisseur de l'application.
@@ -64,7 +66,7 @@ L'en-têteContent-type indique le type de contenu transmis dans le corps de la r
 Corps de la requête HTTP
 Les requêtes HTTP peuvent éventuellement inclure un corps de requête. Un corps de requête est souvent inclus lors de l'utilisation des méthodes HTTP POST et PUT pour transmettre des données.
 
-85672341
+```
 POST /users HTTP/1.1
 Host: example.com
 
@@ -73,12 +75,14 @@ Host: example.com
  "key2":"value2",
  "array1":["value3","value4"]
 }
-12345
+```
+```
 PUT /users/1 HTTP/1.1
 Host: example.com
 Content-type: text/json
 
 {"key1":"value1"}
+```
 Réponses HTTP
 Lorsque le serveur web a fini de traiter la requête HTTP, il renvoie une réponse HTTP.
 
@@ -236,7 +240,6 @@ Comme pour les en-têtes de requête, de nombreux en-têtes HTTP peuvent être i
 
 Les en-têtes de réponse les plus courants sont les suivants :
 
-4
 Date: Fri, 11 Feb 2022 15:00:00 GMT+2
 Server: Apache/2.2.14 (Linux)
 Content-Length: 84
@@ -254,6 +257,7 @@ Le corps de la réponse HTTP suit les en-têtes de la réponse HTTP. Il s'agit d
 
 Il peut contenir des images, des vidéos, des documents HTML et d'autres types de médias.
 
+```
 HTTP/1.1 200 OK
 Date: Fri, 11 Feb 2022 15:00:00 GMT+2
 Server: Apache/2.2.14 (Linux)
@@ -264,3 +268,4 @@ Content-Type: text/html
   <head><title>Test</title></head>
   <body>Test HTML page.</body>
 </html>
+```
