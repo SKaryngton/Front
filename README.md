@@ -41,8 +41,7 @@ Content-type: text/json
 | en-tête |  Description   | 
 |:-----|:--------:|
 | Host   | spécifie l'hôte du serveur et indique où la ressource est demandée.|
-| User-Agent   | informe le serveur web de l'application à l'origine de la requête. Il inclut souvent le système d'exploitation (Windows, Mac, Linux), la version et le fournisseur de l'application.
- | 
+| User-Agent   | informe le serveur web de l'application à l'origine de la requête. Il inclut souvent le système d'exploitation (Windows, Mac, Linux), la version et le fournisseur de l'application.| 
 |Accept   |indique au serveur web le type de contenu que le client acceptera en réponse. |
 | Accept-Language   |indique la langue et éventuellement la locale que le client préfère. |
 | Content-type    | indique le type de contenu transmis dans le corps de la requête. |
