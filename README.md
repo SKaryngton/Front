@@ -14,29 +14,13 @@ Les méthodes HTTP indiquent l'action que le client souhaite effectuer sur la re
 
 Les méthodes HTTP les plus courantes sont les suivantes :
 
-Méthode HTTP
-
-Description de la méthode
-
-GET
-
-Le client demande une ressource sur le serveur web.
-
-POST
-
-Le client soumet des données à une ressource sur le serveur web.
-
-PUT
-
-Le client remplace une ressource sur le serveur web.
-
-DELETE
-
-Le client supprime une ressource sur le serveur web.
-
-PATCH
-
-Le client met partiellement à jour une ressource sur le serveur web.
+| Méthode HTTP |  Description de la méthode  | 
+|:-----|:--------:|
+| GET   | Le client demande une ressource sur le serveur web. |
+| POST   | Le client soumet des données à une ressource sur le serveur web. | 
+| PUT   |Le client remplace une ressource sur le serveur web. |
+| DELETE   |Le client supprime une ressource sur le serveur web. |
+| PATCH   | Le client met partiellement à jour une ressource sur le serveur web. |
 
 ### En-têtes de requête HTTP
 Après la ligne de requête, les en-têtes HTTP sont suivis d'un saut de ligne.
