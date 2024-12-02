@@ -82,158 +82,71 @@ Les codes d'état courants que vous rencontrerez pour chaque catégorie sont les
 
 1XX Information
 
-Code d'état
+| Code d'état |  Phrase de raison  | Description de l'état |
+|:-----|:--------:|------:|
+| 100   | Continuer | Le serveur a reçu les en-têtes de la demande et doit continuer à envoyer le corps de la demande.|
+| 101   |  Changement de protocole  |   Le client a demandé au serveur de changer de protocole et le serveur a accepté de le faire.|
 
-Phrase de raison
 
-Description de l'état
-
-100
-
-Continuer
-
-Le serveur a reçu les en-têtes de la demande et doit continuer à envoyer le corps de la demande.
-
-101
-
-Changement de protocole
-
-Le client a demandé au serveur de changer de protocole et le serveur a accepté de le faire.
 
 2XX Succès
 
-Code d'état
+| Code d'état |  Phrase de raison  | Description de l'état |
+|:-----|:--------:|------:|
+| 200   | OK | Réponse standard renvoyée par le serveur pour indiquer qu'il a traité la demande avec succès.|
+| 201   | Créé |   Le serveur a traité la demande avec succès et une ressource a été créée.|
+| 202   | Accepté |   Le serveur a accepté de traiter la demande, mais le traitement n'est pas encore terminé.|
+| 204   | Pas de contenu |   Le serveur a traité la demande avec succès mais ne renvoie aucun contenu.|
 
-Phrase de raison
-
-Description de l'état
-
-200
-
-OK
-
-Réponse standard renvoyée par le serveur pour indiquer qu'il a traité la demande avec succès.
-
-201
-
-Créé
-
-Le serveur a traité la demande avec succès et une ressource a été créée.
-
-202
-
-Accepté
-
-Le serveur a accepté de traiter la demande, mais le traitement n'est pas encore terminé.
-
-204
-
-Pas de contenu
-
-Le serveur a traité la demande avec succès mais ne renvoie aucun contenu.
 
 3XX Redirection
 
-Code d'état
-
-Phrase de raison
-
-Description de l'état
-
-301
-
-Déplacé de façon permanente
-
-Cette demande et toutes les demandes futures doivent être envoyées à l'emplacement renvoyé.
-
-302
-
-Trouvé
-
-Cette demande doit être envoyée à l'emplacement retourné.
+| Code d'état |  Phrase de raison  | Description de l'état |
+|:-----|:--------:|------:|
+| 301   | Déplacé de façon permanente | Cette demande et toutes les demandes futures doivent être envoyées à l'emplacement renvoyé.|
+| 302   | Trouvé |   Cette demande doit être envoyée à l'emplacement retourné.|
 
 4XX Erreur du client
 
-Code d'état
 
-Phrase de raison
-
-Description de l'erreur
-
-400
-
-Mauvaise demande
-
-Le serveur ne peut pas traiter la demande en raison d'une erreur du client, par exemple une demande non valide ou des données transmises trop volumineuses.
-
-401
-
-Non autorisé
-
-Le client qui fait la demande n'est pas autorisé et doit s'authentifier.
-
-403
-
-Interdit
-
-La demande était valide mais le serveur refuse de la traiter. Ce refus est généralement dû au fait que le client ne dispose pas d'autorisations suffisantes pour le site web, par exemple s'il demande une action d'administrateur alors que l'utilisateur n'est pas administrateur.
-
-404
-
-Non trouvé
-
-Le serveur n'a pas trouvé la ressource demandée.
-
-405
-
-Méthode non autorisée
-
-Le serveur web ne prend pas en charge la méthode HTTP utilisée.
+| Code d'état |  Phrase de raison  | Description de l'état |
+|:-----|:--------:|------:|
+| 400   | Mauvaise demande | Le serveur ne peut pas traiter la demande en raison d'une erreur du client, par exemple une demande non valide ou des données transmises trop volumineuses.|
+| 401   | Non autorisé |   Le client qui fait la demande n'est pas autorisé et doit s'authentifier.|
+| 403   | Interdit |  La demande était valide mais le serveur refuse de la traiter. Ce refus est généralement dû au fait que le client ne dispose pas d'autorisations suffisantes pour le site web, par exemple s'il demande une action d'administrateur alors que l'utilisateur n'est pas administrateur.|
+| 404   | Non trouvé |   Le serveur n'a pas trouvé la ressource demandée.|
+| 405   | Méthode non autorisée |   Le serveur web ne prend pas en charge la méthode HTTP utilisée.|
 
 5XX Erreur du serveur
 
-Code d'état
+| Code d'état |  Phrase de raison  | Description de l'état |
+|:-----|:--------:|------:|
+| 500   | Erreur interne du serveur | Code d'état d'erreur générique donné lorsqu'une erreur ou une condition inattendue s'est produite lors du traitement de la demande.|
+| 502   | Mauvaise passerelle |   Le serveur web a reçu une réponse non valide du serveur d'application.|
+| 503   | Service indisponible |   Le serveur web ne peut pas traiter la demande.|
 
-Phrase de raison
 
-Description de l'erreur
-
-500
-
-Erreur interne du serveur
-
-Code d'état d'erreur générique donné lorsqu'une erreur ou une condition inattendue s'est produite lors du traitement de la demande.
-
-502
-
-Mauvaise passerelle
-
-Le serveur web a reçu une réponse non valide du serveur d'application.
-
-503
-
-Service indisponible
-
-Le serveur web ne peut pas traiter la demande.
-
-En-têtes de réponse HTTP
+### En-têtes de réponse HTTP
 Après la ligne d'état, il y a des en-têtes de réponse HTTP optionnels suivis d'un saut de ligne.
 
 Comme pour les en-têtes de requête, de nombreux en-têtes HTTP peuvent être inclus dans la réponse HTTP.
 
 Les en-têtes de réponse les plus courants sont les suivants :
 
+```
 Date: Fri, 11 Feb 2022 15:00:00 GMT+2
 Server: Apache/2.2.14 (Linux)
 Content-Length: 84
 Content-Type: text/html
-L'en-têteDate indique la date et l'heure auxquelles la réponse HTTP a été générée.
+```
+| en-tête |  Description   | 
+|:-----|:--------:|
+|  Date   | indique la date et l'heure auxquelles la réponse HTTP a été générée.|
+| Server   | décrit le logiciel du serveur web utilisé pour générer la réponse.| 
+|Content-Length  |décrit la longueur de la réponse. |
+| Content-Type   | décrit le type de média de la ressource renvoyée (par exemple, document HTML, image, vidéo). |
+| Content-type    | indique le type de contenu transmis dans le corps de la requête. |
 
-L'en-têteServer décrit le logiciel du serveur web utilisé pour générer la réponse.
-
-L'en-têteContent-Length décrit la longueur de la réponse.
-
-L'en-têteContent-Type décrit le type de média de la ressource renvoyée (par exemple, document HTML, image, vidéo).
 
 Corps de la réponse HTTP
 Le corps de la réponse HTTP suit les en-têtes de la réponse HTTP. Il s'agit du contenu principal de la réponse HTTP.
