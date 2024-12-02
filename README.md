@@ -5,7 +5,7 @@ Chaque requête HTTP commence par la ligne de requête.
 
 Celle-ci se compose de la méthode HTTP, de la ressource demandée et de la version du protocole HTTP.
 
-```GET /home.html HTTP/1.1````
+``` GET /home.html HTTP/1.1 ```
 
 Dans cet exemple,GET est la méthode HTTP,```/home.html``` est la ressource demandée et HTTP 1.1 est le protocole utilisé.
 
